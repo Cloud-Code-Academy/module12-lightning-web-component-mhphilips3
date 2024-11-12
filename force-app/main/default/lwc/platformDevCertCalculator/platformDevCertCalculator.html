@@ -1,6 +1,6 @@
 <template>
     <lightning-card  title="PD1 Calculator">
-        <!-- Process -->
+        <!-- Button to calculate the certification score -->
         <lightning-button 
             variant="brand" 
             label="Calculate" 
@@ -8,7 +8,7 @@
             slot="actions" 
             onclick={calculateScore}
         ></lightning-button>
-        <!-- Input information -->
+        <!-- Input fields for each score category -->
         <div class="slds-p-horizontal_small">
             <lightning-input 
                 type="number" 
@@ -42,12 +42,15 @@
         <!-- display results -->
         <div slot="footer">
             <h1 class="slds-text-heading_large slds-text-title_caps resultText">Certification Results</h1>
+            <!-- Display the calculated certification score -->
             <p class="slds-text-heading_medium">Certification Score: <span class="slds-text-color_destructive">{certificationScore}%</span></p>
+            <!-- Tabs displaying previous attempts -->
             <div>
                 <h1 class="slds-text-heading_large">Previous Attempt</h1>
                 <lightning-tabset>
                     <div for:each={attemptHistory} for:item="attempt" key={attempt.Id}>
                             <lightning-tab label={attempt.Id}>
+                                <!-- Score information for each attempt -->
                                 <c-score-information
                                     score={attempt.Score}
                                     attempt-id={attempt.Id}
@@ -58,6 +61,7 @@
                     </div>                
                 </lightning-tabset>
             </div>
+            <!-- Conditional rendering based on pass/fail status -->
             <template lwc:if={showResources}>
                 <ul class="slds-text-align_left slds-var-p-top_medium slds-box">
                     <li class="slds-text-title_bold resourceLi">
