@@ -1,3 +1,9 @@
+Remarks:
+1. unsure of the testing -- I see where a test class was created, but it wouldn't work to run it.  I believe I have the precise code Warren has and it works just like his does.
+2. I tried adding helpful comments, but am a little unsure what the convention is here.  JS seemed to be similar enough to Apex and I put LWC headers on these files.  HTML seems somewhat self-explainatory with the readable tags, so I sprinkled general headers throughout the code to describe what was happening.  I left the xml files alone.   
+
+
+[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=16907719&assignment_repo_type=AssignmentRepo)
 # Developer Kickstart: Introduction to Lightning Web Components (LWC)
 This repository is a foundational pillar of the Developer Kickstart curriculum at Cloud Code Academy. Crafted specifically for budding Salesforce developers, this module introduces the groundbreaking world of Lightning Web Components. LWC opens a new dimension in Salesforce front-end development, emphasizing modern JavaScript techniques, Salesforce data integration, and interactive user interfaces.
 
